@@ -1,0 +1,21 @@
+<h1>Listing bobcats</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bobcats.each do |bobcat| %>
+  <tr>
+    <td><%= link_to 'Show', bobcat %></td>
+    <td><%= link_to 'Edit', edit_bobcat_path(bobcat) %></td>
+    <td><%= link_to 'Destroy', bobcat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bobcat', new_bobcat_path %>

@@ -1,0 +1,17 @@
+<%= form_for(@bobcat) do |f| %>
+  <% if @bobcat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bobcat.errors.count, "error") %> prohibited this bobcat from being saved:</h2>
+
+      <ul>
+      <% @bobcat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

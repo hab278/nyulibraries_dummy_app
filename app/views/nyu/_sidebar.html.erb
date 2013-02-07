@@ -1,0 +1,12 @@
+<div id="account" class="sidebar-section">
+  <h2><a href="http://library.nyu.edu/info/myworkspace.html" title="What is My Workspace?" data-placement="left"><i class="icons-famfamfam-help"></i></a> My Workspace</h2>
+  <ul>
+    <% if current_user %>
+      <li><a href="https://eshelf.library.nyu.edu?institution=NYU">My e-shelf</a></li>
+      <li><a href="https://eshelf.library.nyu.edu/account?institution=NYU">My library account</a></li>
+      <li><%= link_to "Log-out " + current_user.firstname, logout_url, :class=>"logout" %></li>
+    <% else %>
+      <li><a href="https://eshelf.library.nyu.edu?institution=NYU">Guest e-shelf (log in for more options)</a></li>
+    <% end %>
+  </ul>
+</div>
